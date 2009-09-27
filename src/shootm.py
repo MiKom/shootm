@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from appview import *
+from AppView import *
 
 class Shootm:
     def __init__(self):
