@@ -88,7 +88,7 @@ END;
 CREATE TABLE rounds (
 	id		INTEGER NOT NULL PRIMARY KEY,
 	resultId 	INTEGER NOT NULL REFERENCES results(id) ON DELETE CASCADE,
-	roundResult	FLOAT NOT NULL CHECK(roundResult>=0.0 AND roundResult<=109.0),
+	score	        FLOAT NOT NULL CHECK(roundResult>=0.0 AND roundResult<=109.0),
 	roundNum	TINYINT NOT NULL CHECK(roundNum>0)
 );
 
@@ -168,7 +168,7 @@ END;
 CREATE TABLE cRounds (
 	id		INTEGER NOT NULL PRIMARY KEY,
 	cResultId	INTEGER NOT NULL REFERENCES cResults(id) ON DELETE CASCADE,
-	roundResult	FLOAT NOT NULL CHECK(roundResult>=0.0 AND roundResult<=109.0),
+	score 		FLOAT NOT NULL CHECK(roundResult>=0.0 AND roundResult<=109.0),
 	roundNum	TINYINT NOT NULL CHECK(roundNum>0)
 );
 
